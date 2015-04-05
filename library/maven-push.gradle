@@ -1,0 +1,15 @@
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.astuetz.fork'
+            artifactId 'pagerslidingtabstrip'
+            version '1.0.1'
+            artifact source: file("${project.buildDir}/libs/PagerSlidingTabStrip-1.0.1.aar")
+        }
+    }
+    repositories {
+        maven {
+            url "file:${rootDir}/maven-repo"
+        }
+    }
+}
